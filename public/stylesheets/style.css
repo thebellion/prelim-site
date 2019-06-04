@@ -1,0 +1,50 @@
+body {
+  background-image: url("/images/bellion2.jpg");
+  background-size: 50%;
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+blockquote {
+  position: relative;
+  top: 200px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+i {
+  padding: 10px;
+}
+
+#logo {
+  position: relative;
+  top: -45px;
+  left: 10px;
+}
+
+#div1 {
+  display: none;
+}
+
+#div2{
+  display: none;
+}
+
+#div3 {
+  display: none;
+}
+
+#about {
+  position: relative;
+  background-color: dimgray;
+}
+
+#icon {
+  position: absolute;
+  bottom: 0;
+}
+
