@@ -1,23 +1,35 @@
 <div class="container" id="about">
 {{#each employees}}
-  <div class="row">
-    <div class="col big-box">
+  <div class="row jumbotron" id="employee">
+    <div class="col">
       <img src={{this.imagePath}} width='300' height='300'>
     </div>
 
     <div class="col">
       <div class="row">
-        <h4>{{this.name}}</h4>
-        <h4>{{this.jobTitle}}</h4>
-        <p>{{this.description}}</p>
+        <h3>{{this.name}}</h3>
       </div>
+      <div class="row">
+        <h5>{{this.jobTitle}}</h5>
+      </div>
+       <div class="row">
+        <p>{{this.description}}</p>
+       </div>       
       <div class="row justify-content-center" id="icon">
-        <a href={{this.twitter}} class="fa fa-twitter fa-lg"></a>
-        <a href={{this.facebook}} class="fa fa-facebook fa-lg"></a>
-        <a href={{this.linkedin}} class="fa fa-linkedin fa-lg"></a>
+        <a href={{this.twitter}}>
+            <i class="fa fa-twitter fa-lg"></i>
+        </a>
+        <a href={{this.facebook}} >
+            <i class="fa fa-facebook fa-lg"></i>
+        </a>
+        <a href={{this.linkedin}}>
+            <i class="fa fa-linkedin fa-lg"></i>
+        </a>
+        
        
       </div>
     </div>
-{{/each}}
+
   </div>
+{{/each}}
 </div>

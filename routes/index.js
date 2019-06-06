@@ -16,7 +16,10 @@ router.get("/about", function(req, res) {
     res.render('about', {employees: employees})
     console.log(employees);
   });
+});
 
+router.get("/portfolio", function(req, res) {
+  res.render('portfolio')
 });
 
 router.get("/contact", function(req, res) {
@@ -25,7 +28,8 @@ router.get("/contact", function(req, res) {
 
 
 router.post("/contact", function (req, res) {
-  let mailOpts, smtpTrans;
+
+let mailOpts, smtpTrans;
   
 smtpTrans = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
@@ -51,6 +55,16 @@ smtpTrans = nodemailer.createTransport({
        console.log("success" + info.response);
        res.render('index');
     }
+  });
+});
+
+router.get("/login", function(req, res){  
+  res.render("login");
+  });
+
+router.post("/login", function(req, res){
+  Employee.find(function(err, docs){
+    var employees = docs;
   });
 });
 

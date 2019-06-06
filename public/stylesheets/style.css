@@ -1,5 +1,5 @@
 body {
-  background-image: url("/images/B-Solo.png");
+  background-image: url("/images/B-solo.png");
   background-size: 50%;
   background-position: center;
   background-color: black;
@@ -21,17 +21,20 @@ i {
 }
 
 #logo {
+
   position: relative;
   top: -45px;
-  left: 10px;
+  left: -30px;
 }
 
 #div1 {
   display: none;
 }
 
-#div2{
+
+#div2 {
   display: none;
+
 }
 
 #div3 {
@@ -39,12 +42,16 @@ i {
 }
 
 #about {
-  position: relative;
-  background-color: dimgray;
+ /* position: relative;*/
+  background-color: white;
 }
 
 #icon {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
+  
 }
 
+#employee {
+  padding: 10px;
+}
