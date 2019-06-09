@@ -7,13 +7,27 @@ var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var nodemailer = require('nodemailer');
+var Sequelize = require('sequelize');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/bellion')
+const sequelize = new Sequelize('store', 'root', 'password', {
+  host: 'localhost',
+  dialect: 'mysql',
+  port: '3306',
+
+  pool: {
+    max: 10,
+    min: 0,
+ 
+  },
+});
+
+//mongoose.connect('mongodb://localhost:27017/bellion')
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));

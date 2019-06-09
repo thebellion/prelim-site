@@ -1,15 +1,23 @@
 body {
-  background-image: url("/images/B-solo.png");
-  background-size: 50%;
-  background-position: center;
+ 
+  
   background-color: black;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
 }
 
 blockquote {
   position: relative;
   top: 200px;
+}
+
+.b-fancy {
+  display: none;
+  position: sticky;
+  width: 900px;
+  height: 900px; 
+  top: 0;
+  z-index: -1;
+
 }
 
 a {

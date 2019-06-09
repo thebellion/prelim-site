@@ -2,20 +2,42 @@ var express = require('express');
 var router = express.Router();
 
 var nodemailer = require('nodemailer');
+var Sequelize = require('sequelize');
 
 var Employee = require("../models/employee")
 
+
+const sequelize = new Sequelize('bellion', 'root', 'password', {
+  host: 'localhost',
+  dialect: 'mysql',
+  port: '3306',
+
+  pool: {
+    max: 10,
+    min: 0,
+ 
+  },
+});
+
+var sqlEmployee = sequelize.import('../models/sqlemployee')
 /* GET home page. */
 router.get("/", function(req, res) {
   res.render('index');
 });
 
 router.get("/about", function(req, res) {
-  Employee.find(function(err, docs){
+  sqlEmployee.findAll().then(employees =>{
+    res.render('about', {employees: employees})
+    console.log(employees);
+  });
+  /*Employee.find(function(err, docs){
     var employees = docs;
     res.render('about', {employees: employees})
     console.log(employees);
   });
+  */
+
+
 });
 
 router.get("/portfolio", function(req, res) {
